@@ -1,0 +1,11 @@
+es\unican\is2\IGestionTiendas.class
+es\unican\is2\IGestionEmpleados.class
+es\unican\is2\OperacionNoValidaException.class
+es\unican\is2\DataAccessException.class
+es\unican\is2\IEmpleadosDAO.class
+es\unican\is2\Categoria.class
+es\unican\is2\Empleado$1.class
+es\unican\is2\Empleado.class
+es\unican\is2\IGestionAltasBajas.class
+es\unican\is2\Tienda.class
+es\unican\is2\ITiendasDAO.class
