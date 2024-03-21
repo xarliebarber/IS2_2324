@@ -1,0 +1,14 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< es.unican.is2:franquiciasuccommon >------------------
+[INFO] Building franquiciasuccommon 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ franquiciasuccommon ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.263 s
+[INFO] Finished at: 2024-03-12T21:11:12+01:00
+[INFO] ------------------------------------------------------------------------
