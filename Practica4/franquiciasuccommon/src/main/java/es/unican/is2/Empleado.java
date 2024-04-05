@@ -1,7 +1,6 @@
 package es.unican.is2;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -61,8 +60,6 @@ public class Empleado {
 				break;
 			case AUXILIAR:
 				sueldoFinal += 1000;
-				break;
-			default:
 				break;
 		}
 		LocalDate fechaActual = LocalDate.now();
