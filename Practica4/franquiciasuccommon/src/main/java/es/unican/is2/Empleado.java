@@ -45,6 +45,10 @@ public class Empleado {
 		this.fechaContratacion = fechaContratacion;
 	}
 
+	public Empleado() {
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * Retorna el sueldo bruto del empleado
 	 */
@@ -58,7 +62,7 @@ public class Empleado {
 			case VENDEDOR:
 				sueldoFinal += 1500;
 				break;
-			case AUXILIAR:
+			default:
 				sueldoFinal += 1000;
 				break;
 		}

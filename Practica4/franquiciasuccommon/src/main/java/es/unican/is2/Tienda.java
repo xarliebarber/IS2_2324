@@ -104,4 +104,9 @@ public class Tienda implements Serializable {
 	public void setId(long id) {
 		this.id = id;
 	}
+
+	public void setEmpleados(List<Empleado> empleados2) {
+		// Metodo auxiliar para comprobaciones de tests rapidas
+		this.empleados = empleados2;
+	}
 }

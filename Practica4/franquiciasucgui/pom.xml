@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.unican.is2</groupId>
-    <artifactId>FranquiciasUCGUI</artifactId>
+    <artifactId>franquiciasucgui</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
 	        <groupId>es.unican.is2</groupId>
-	        <artifactId>FranquiciasUCCommon</artifactId>
+	        <artifactId>franquiciasuccommon</artifactId>
 	        <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
