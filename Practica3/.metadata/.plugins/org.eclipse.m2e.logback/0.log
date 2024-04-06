@@ -1,0 +1,58 @@
+2024-03-08 10:37:42,786 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-03-12 21:31:22,597 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-03-12 21:34:22,215 [Worker-4: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucdao:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucdao\pom.xml.
+2024-03-12 21:34:23,280 [Worker-24: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucbusiness:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucbusiness\pom.xml.
+2024-03-12 21:34:24,060 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download javadoc for es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact es.unican.is2:franquiciasuccommon:jar:javadoc:1.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2024-03-12 21:34:24,174 [Worker-24: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:24,187 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-03-12 21:34:24,196 [Worker-24: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:24,199 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucbusiness\src\test\resources
+2024-03-12 21:34:25,012 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasuccommon\pom.xml.
+2024-03-12 21:34:25,206 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucdao:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucdao\pom.xml.
+2024-03-12 21:34:25,655 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224-sources.jar
+2024-03-12 21:34:30,326 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224-sources.jar
+2024-03-12 21:34:30,361 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.h2database:h2:2.2.224
+2024-03-12 21:34:30,448 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasuccommon: es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT with classifier  to /franquiciasuccommon/target/classes
+2024-03-12 21:34:30,765 [Worker-19: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucbusiness:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucbusiness\pom.xml.
+2024-03-12 21:34:30,772 [Worker-19: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasuccommon: es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT with classifier  to /franquiciasuccommon/target/classes
+2024-03-12 21:34:31,022 [Worker-19: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:31,034 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-03-12 21:34:31,040 [Worker-19: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:31,041 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasuccommon\src\test\resources
+2024-03-12 21:34:31,853 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:31,854 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-03-12 21:34:31,857 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:31,858 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucdao\src\test\resources
+2024-03-12 21:34:32,063 [Worker-23: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucgui:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucgui\pom.xml.
+2024-03-12 21:34:32,065 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasuccommon: es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT with classifier  to /franquiciasuccommon/target/classes
+2024-03-12 21:34:32,098 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:32,102 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-03-12 21:34:32,106 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:32,107 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucgui\src\test\resources
+2024-03-12 21:34:32,264 [Worker-23: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: es.unican.is2:franquiciasucmain:1.0-SNAPSHOT @ C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucmain\pom.xml.
+2024-03-12 21:34:32,283 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasuccommon: es.unican.is2:franquiciasuccommon:1.0-SNAPSHOT with classifier  to /franquiciasuccommon/target/classes
+2024-03-12 21:34:32,283 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasucbusiness: es.unican.is2:franquiciasucbusiness:1.0-SNAPSHOT with classifier  to /franquiciasucbusiness/target/classes
+2024-03-12 21:34:32,283 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasucdao: es.unican.is2:franquiciasucdao:1.0-SNAPSHOT with classifier  to /franquiciasucdao/target/classes
+2024-03-12 21:34:32,287 [Worker-23: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/franquiciasucgui: es.unican.is2:franquiciasucgui:1.0-SNAPSHOT with classifier  to /franquiciasucgui/target/classes
+2024-03-12 21:34:32,364 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:32,367 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-03-12 21:34:32,372 [Worker-23: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-03-12 21:34:32,377 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica3\franquiciasucmain\src\test\resources
