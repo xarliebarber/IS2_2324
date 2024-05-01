@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="VendedorEnPlantillaTest" time="0.07" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="VendedorEnPlantillaTest" time="0.094" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\carlo\AppData\Local\Temp\surefire9308600203554489532\surefirebooter-20240418121340309_3.jar C:\Users\carlo\AppData\Local\Temp\surefire9308600203554489532 2024-04-18T12-13-40_182-jvmRun1 surefire-20240418121340309_1tmp surefire_0-20240418121340309_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\carlo\AppData\Local\Temp\surefire3470113166050305542\surefirebooter-20240424224511504_3.jar C:\Users\carlo\AppData\Local\Temp\surefire3470113166050305542 2024-04-24T22-45-11_342-jvmRun1 surefire-20240424224511504_1tmp surefire_0-20240424224511504_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica5\p5original\target\test-classes;C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica5\p5original\target\classes;C:\Users\carlo\.m2\repository\es\unican\is2\fundamentos\1.0\fundamentos-1.0.jar;C:\Users\carlo\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\carlo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\carlo\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\carlo\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\carlo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\carlo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\carlo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\carlo\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\carlo\AppData\Local\Temp\surefire9308600203554489532\surefirebooter-20240418121340309_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\carlo\AppData\Local\Temp\surefire3470113166050305542\surefirebooter-20240424224511504_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -58,9 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSetTotalVentas" classname="VendedorEnPlantillaTest" time="0.044"/>
-  <testcase name="testSetComision" classname="VendedorEnPlantillaTest" time="0.001"/>
+  <testcase name="testSetTotalVentas" classname="VendedorEnPlantillaTest" time="0.053"/>
+  <testcase name="testSetComision" classname="VendedorEnPlantillaTest" time="0.002"/>
   <testcase name="testAnhadeVenta" classname="VendedorEnPlantillaTest" time="0.001"/>
-  <testcase name="testEquals" classname="VendedorEnPlantillaTest" time="0.003"/>
+  <testcase name="testEquals" classname="VendedorEnPlantillaTest" time="0.002"/>
   <testcase name="testConstructor" classname="VendedorEnPlantillaTest" time="0.001"/>
 </testsuite>

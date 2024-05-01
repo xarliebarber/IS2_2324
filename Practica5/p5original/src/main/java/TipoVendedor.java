@@ -4,6 +4,6 @@
  * que existen en la tienda
  *
  */
-public enum TipoVendedor {
+public enum TipoVendedor {// VMC+0 // Cog + 0
 	Junior, Senior
 }
