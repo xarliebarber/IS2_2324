@@ -8,12 +8,12 @@ import fundamentos.Mensaje;
 /**
  * Gestion de las comisiones de vendedores de una tienda
  */
-public class GestionComisiones { // VMC = 15
+public class GestionComisiones { // VMC = 14 // CCog = 8
 
 	/**
 	 * Programa principal basado en menu
 	 */
-	public static void main(String[] args) {// VMC + 15 // CCog + 32
+	public static void main(String[] args) {// VMC + 4 // CCog + 3
 		// opciones del menu
 		final int NUEVA_VENTA = 0, VENDEDOR_DEL_MES = 1, VENDEDORES = 2;
 		// crea la tienda
@@ -48,7 +48,7 @@ public class GestionComisiones { // VMC = 15
 		}
 	}
 
-	private static void vendedores(Tienda tienda) {
+	private static void vendedores(Tienda tienda) {// VMC + 2 // CCog + 1
 		List<Vendedor> vendedores;
 		String msj;
 		try {
@@ -57,20 +57,20 @@ public class GestionComisiones { // VMC = 15
 			Tienda.ordenarVendedoresPorVentasDescendente(vendedores);
 			msj = obtenerTextoVendedores(vendedores);
 			mensaje("VENDEDORES", msj);
-		} catch (DataAccessException e) {// VMC + 1 // CCog + 3
+		} catch (DataAccessException e) {// VMC + 1 // CCog + 1
 			mensaje("ERROR", "No se pudo acceder a los datos");
 		}
 	}
 
-	private static String obtenerTextoVendedores(List<Vendedor> vendedores) {
+	private static String obtenerTextoVendedores(List<Vendedor> vendedores) {// VMC + 2 // CCog + 1
 		String msj = new String();
-		for (Vendedor vn : vendedores) {// VMC + 1 // CCog + 3
+		for (Vendedor vn : vendedores) {// VMC + 1 // CCog + 1
 			msj += vn.getNombre() + " (" + vn.getId() + ") " + vn.getTotalVentas() + "\n";
 		}
 		return msj;
 	}
 
-	private static void vendedorDelMes(Tienda tienda) {
+	private static void vendedorDelMes(Tienda tienda) {// VMC + 2 // CCog + 1
 		List<Vendedor> vendedoresOrd;
 		Vendedor resultado;
 		String msj;
@@ -82,12 +82,12 @@ public class GestionComisiones { // VMC = 15
 			msj += resultado.getNombre() + "\n";
 			mensaje("VENDEDORES DEL MES", msj);
 
-		} catch (DataAccessException e) { // VMC + 1 // CCog + 3
+		} catch (DataAccessException e) { // VMC + 1 // CCog + 1
 			mensaje("ERROR", "No se pudo acceder a los datos");
 		}
 	}
 
-	private static void nuevaVenta(Tienda tienda) {
+	private static void nuevaVenta(Tienda tienda) {// VMC + 3 // CCog + 2
 		String dni;
 		Lectura lect;
 		lect = new Lectura("Datos Venta");
@@ -97,10 +97,10 @@ public class GestionComisiones { // VMC = 15
 		dni = lect.leeString("ID Vendedor");
 		double importe = lect.leeDouble("Importe");
 		try {
-			if (!tienda.anhadeVenta(dni, importe)) { // VMC + 1 // CCog + 3
+			if (!tienda.anhadeVenta(dni, importe)) { // VMC + 1 // CCog + 1
 				mensaje("ERROR", "El vendedor no existe");
 			}
-		} catch (DataAccessException e) { // VMC + 1 // CCog + 3
+		} catch (DataAccessException e) { // VMC + 1 // CCog + 1
 			mensaje("ERROR", "No se pudo guardar el cambio");
 		}
 	}

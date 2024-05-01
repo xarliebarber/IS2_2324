@@ -3,7 +3,7 @@
  * Por cada vendedor se almacenan sus datos personales
  * y sus datos sobre ventas y comisiones
  */
-public abstract class Vendedor {
+public abstract class Vendedor {// VMC + 9
 
 	private String id;
 	private String nombre;
@@ -78,7 +78,7 @@ public abstract class Vendedor {
 		totalVentas += importe;
 	}
 
-	public void anhadeComision(double importe) {
+	public void anhadeComision(double importe) {// VMC + 1
 		/* Metodo subimplementado en las clases hijas */
 	}
 }

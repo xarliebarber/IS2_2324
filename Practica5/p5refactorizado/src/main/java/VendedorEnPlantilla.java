@@ -27,7 +27,7 @@ public class VendedorEnPlantilla extends Vendedor {
 	}
 
 	@Override
-	public void anhadeComision(double importe) {
+	public void anhadeComision(double importe) {// VMC + 1
 		/* Metodo subimplementado en las clases hijas */
 	}
 }

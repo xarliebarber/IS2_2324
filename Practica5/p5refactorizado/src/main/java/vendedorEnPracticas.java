@@ -18,7 +18,7 @@ public class vendedorEnPracticas extends Vendedor {
 	}
 
 	@Override
-	public boolean equals(Object obj) {// VMC + 3 //Cog + 2
+	public boolean equals(Object obj) {// VMC + 4 //Cog + 2
 		if (!(obj instanceof vendedorEnPracticas))
 			return false;
 		vendedorEnPracticas v = (vendedorEnPracticas) obj;
