@@ -1,0 +1,22 @@
+INDEX VERSION 1.134+C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica4\PruebaListaOrdenadaAcotada\.metadata\.plugins\org.eclipse.jdt.core
+327522840.index
+3413270776.index
+1865797976.index
+3507561993.index
+2204401136.index
+3129338920.index
+3038960981.index
+727507996.index
+906237641.index
+199570366.index
+204260820.index
+2309910844.index
+1067094681.index
+2230482940.index
+1690538995.index
+2449494275.index
+4087963340.index
+3011964233.index
+3444297624.index
+442654450.index
+1703029611.index
