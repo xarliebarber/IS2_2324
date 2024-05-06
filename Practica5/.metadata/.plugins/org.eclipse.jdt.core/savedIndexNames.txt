@@ -1,0 +1,13 @@
+INDEX VERSION 1.134+C:\Users\carlo\IngenieriaDelSoftwareII\IS2_2324\Practica5\.metadata\.plugins\org.eclipse.jdt.core
+3831008566.index
+1865797976.index
+893244698.index
+161215178.index
+603854143.index
+105116160.index
+135964731.index
+2576609292.index
+1322035874.index
+579007234.index
+3698020071.index
+3248247270.index
