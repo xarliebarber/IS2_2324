@@ -17,8 +17,9 @@ import java.util.Scanner;
  * crear la tienda
  */
 public class Tienda {// VMC + 41 // CCog + 30
+	private static final String JUNIOR = "Junior";
 
-	private List<Vendedor> lista = new LinkedList<Vendedor>();
+	private List<Vendedor> lista = new LinkedList<>();
 	private String direccion;
 	private String nombre;
 
@@ -98,7 +99,7 @@ public class Tienda {// VMC + 41 // CCog + 30
 		}
 
 		if (v instanceof VendedorEnPlantilla) {// VMC + 1 // CCog + 1
-			VendedorEnPlantilla vEP = (VendedorEnPlantilla) ((v));
+			VendedorEnPlantilla vEP = (VendedorEnPlantilla) (v);
 			vEP.anhadeComision(importe);
 		}
 
@@ -114,7 +115,7 @@ public class Tienda {// VMC + 41 // CCog + 30
 	 */
 	public Vendedor buscaVendedor(String id) throws DataAccessException {// VMCmetodo+3//CCogmetodo + 3
 
-		lista = new LinkedList<Vendedor>();
+		lista = new LinkedList<>();
 
 		// abre el fichero y lee los datos
 		procesaVendedores();
@@ -133,7 +134,7 @@ public class Tienda {// VMC + 41 // CCog + 30
 	 * @return La lista de vendedores
 	 */
 	public List<Vendedor> vendedores() throws DataAccessException {// VMCmetodo+1//CCogmetodo + 0
-		lista = new LinkedList<Vendedor>();
+		lista = new LinkedList<>();
 
 		procesaVendedores();
 
@@ -152,7 +153,7 @@ public class Tienda {// VMC + 41 // CCog + 30
 			in.next();
 			Vendedor ven;
 			String tipo;
-			while (in.hasNext() && !(tipo = in.next()).equals("Junior")) { // VMC + 2 // CCog + 1
+			while (in.hasNext() && !(tipo = in.next()).equals(JUNIOR)) { // VMC + 2 // CCog + 1
 				procesaVendedor(in, tipo);
 			}
 			// lee los vendedores junior
@@ -197,10 +198,12 @@ public class Tienda {// VMC + 41 // CCog + 30
 			totalComision = in.nextDouble();
 		}
 		switch (tipo) {// VMC + 0 // CCog + 1
-			case ("Junior"):// VMC + 1 // CCog +0
+			case (JUNIOR):// VMC + 1 // CCog +0
 				ven = new VendedorEnPlantillaJunior(nombre, idIn, dni);
+				break;
 			default:// VMC + 1 // CCog + 0
 				ven = new VendedorEnPlantillaSenior(nombre, idIn, dni);
+				break;
 		}
 		ven.setTotalVentas(totalVentas);
 		ven.setComision(totalComision);
@@ -212,30 +215,31 @@ public class Tienda {// VMC + 41 // CCog + 30
 	 * los vendedores
 	 */
 	private void vuelcaDatos() throws DataAccessException {// VMCmetodo + 9//CCogmetodo + 11
-		PrintWriter out = null;
-		List<Vendedor> senior = new LinkedList<Vendedor>();
-		List<Vendedor> junior = new LinkedList<Vendedor>();
-		List<Vendedor> practicas = new LinkedList<Vendedor>();
 
-		for (Vendedor v : lista) {// VMC + 1 // CCog + 1
-			if (v instanceof vendedorEnPracticas) {// VMC + 1 // CCog + 2
-				practicas.add(v);
-			} else if (v instanceof VendedorEnPlantilla) {// VMC + 1 // CCog + 1
-				VendedorEnPlantilla vp = (VendedorEnPlantilla) v;
-				if (vp instanceof VendedorEnPlantillaJunior)// VMC + 1 // CCog + 3
-					junior.add(vp);
-				else // VMC + 1 // CCog + 1
-					senior.add(vp);
-			}
-		}
+		PrintWriter out = null;
 
 		try {
+			List<Vendedor> senior = new LinkedList<>();
+			List<Vendedor> junior = new LinkedList<>();
+			List<Vendedor> practicas = new LinkedList<>();
+
+			for (Vendedor v : lista) {// VMC + 1 // CCog + 1
+				if (v instanceof vendedorEnPracticas) {// VMC + 1 // CCog + 2
+					practicas.add(v);
+				} else if (v instanceof VendedorEnPlantilla) {// VMC + 1 // CCog + 1
+					VendedorEnPlantilla vp = (VendedorEnPlantilla) v;
+					if (vp instanceof VendedorEnPlantillaJunior)// VMC + 1 // CCog + 3
+						junior.add(vp);
+					else // VMC + 1 // CCog + 1
+						senior.add(vp);
+				}
+			}
 
 			out = new PrintWriter(new FileWriter(datos));
 
 			out.println(nombre);
 			out.println(direccion);
-			vuelcaVendedor(out, senior, junior);
+			vuelcaVendedor(out, senior);
 			out.println();
 			out.println("Practicas");
 			for (Vendedor v : practicas) { // VMC + 1 // CCog + 1
@@ -252,27 +256,23 @@ public class Tienda {// VMC + 41 // CCog + 30
 		}
 	}
 
-	private void vuelcaVendedor(PrintWriter out, List<Vendedor> senior, List<Vendedor> junior) {// VMCmet + 2 // CCogmet
-																								// + 1
-		String[] longevidadVendedor = { "Senior", "Junior" };
+	private void vuelcaVendedor(PrintWriter out, List<Vendedor> senior) {// VMCmet + 2 // CCogmet
+		// + 1
+		String[] longevidadVendedor = { "Senior", JUNIOR };
 		for (int i = 0; i < 2; i++) { // VMC + 1 // CCog + 1
 			out.println();
 			out.println(longevidadVendedor[i]);
-			vuelcaVendedor(out, senior);
+			for (Vendedor v : senior) {// VMC + 1 // CCog + 1
+				VendedorEnPlantilla v1 = (VendedorEnPlantilla) v;
+				out.println("  Nombre: " + v1.getNombre() + " Id: " + v1.getId() + " DNI: " + v1.dni()
+						+ " TotalVentasMes: " + v1.getTotalVentas() + " TotalComision: " + v1.getComision());
+			}
 		}
 
-	}
-
-	private void vuelcaVendedor(PrintWriter out, List<Vendedor> senior) {// VMCmet + 2 // CCogmet + 1
-		for (Vendedor v : senior) {// VMC + 1 // CCog + 1
-			VendedorEnPlantilla v1 = (VendedorEnPlantilla) v;
-			out.println("  Nombre: " + v1.getNombre() + " Id: " + v1.getId() + " DNI: " + v1.dni()
-					+ " TotalVentasMes: " + v1.getTotalVentas() + " TotalComision: " + v1.getComision());
-		}
 	}
 
 	static void ordenarVendedoresPorVentasDescendente(List<Vendedor> vendedores) {// VMCmet + 3 // CCogmet + 3
-		Collections.sort(vendedores, new Comparator<Vendedor>() {
+		Collections.sort(vendedores, new Comparator<>() {
 			public int compare(Vendedor o1, Vendedor o2) {
 				if (o1.getTotalVentas() > o2.getTotalVentas())// VMC + 1 // CCog + 2
 					return -1;

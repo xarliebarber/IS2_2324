@@ -30,4 +30,10 @@ public class VendedorEnPlantilla extends Vendedor {
 	public void anhadeComision(double importe) {// VMC + 1
 		/* Metodo subimplementado en las clases hijas */
 	}
+
+	@Override
+	public int hashCode() { // VMC + 1
+		return getId().hashCode() + dni().hashCode();
+	}
+
 }

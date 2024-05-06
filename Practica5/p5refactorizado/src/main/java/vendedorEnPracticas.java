@@ -25,4 +25,9 @@ public class vendedorEnPracticas extends Vendedor {
 		return (v.getId().equals(getId()) && v.getDni().equals(getDni()));
 	}
 
+	@Override
+	public int hashCode() { // VMC + 1
+		return getId().hashCode() + getDni().hashCode();
+	}
+
 }

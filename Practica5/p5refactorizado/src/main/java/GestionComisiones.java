@@ -9,6 +9,7 @@ import fundamentos.Mensaje;
  * Gestion de las comisiones de vendedores de una tienda
  */
 public class GestionComisiones { // VMC = 14 // CCog = 8
+	private static final String ERROR = "ERROR";
 
 	/**
 	 * Programa principal basado en menu
@@ -44,7 +45,10 @@ public class GestionComisiones { // VMC = 14 // CCog = 8
 				case VENDEDORES:// VMC + 1
 					vendedores(tienda);
 					break;
+				default:
+					break;
 			}
+			break;
 		}
 	}
 
@@ -58,7 +62,7 @@ public class GestionComisiones { // VMC = 14 // CCog = 8
 			msj = obtenerTextoVendedores(vendedores);
 			mensaje("VENDEDORES", msj);
 		} catch (DataAccessException e) {// VMC + 1 // CCog + 1
-			mensaje("ERROR", "No se pudo acceder a los datos");
+			mensaje(ERROR, "No se pudo acceder a los datos");
 		}
 	}
 
@@ -83,25 +87,26 @@ public class GestionComisiones { // VMC = 14 // CCog = 8
 			mensaje("VENDEDORES DEL MES", msj);
 
 		} catch (DataAccessException e) { // VMC + 1 // CCog + 1
-			mensaje("ERROR", "No se pudo acceder a los datos");
+			mensaje(ERROR, "No se pudo acceder a los datos");
 		}
 	}
 
 	private static void nuevaVenta(Tienda tienda) {// VMC + 3 // CCog + 2
 		String dni;
 		Lectura lect;
-		lect = new Lectura("Datos Venta");
-		lect.creaEntrada("ID Vendedor", "");
-		lect.creaEntrada("Importe", "");
-		lect.esperaYCierra();
-		dni = lect.leeString("ID Vendedor");
-		double importe = lect.leeDouble("Importe");
+
 		try {
+			lect = new Lectura("Datos Venta");
+			lect.creaEntrada("ID Vendedor", "");
+			lect.creaEntrada("Importe", "");
+			lect.esperaYCierra();
+			dni = lect.leeString("ID Vendedor");
+			double importe = lect.leeDouble("Importe");
 			if (!tienda.anhadeVenta(dni, importe)) { // VMC + 1 // CCog + 1
-				mensaje("ERROR", "El vendedor no existe");
+				mensaje(ERROR, "El vendedor no existe");
 			}
 		} catch (DataAccessException e) { // VMC + 1 // CCog + 1
-			mensaje("ERROR", "No se pudo guardar el cambio");
+			mensaje(ERROR, "No se pudo guardar el cambio");
 		}
 	}
 
